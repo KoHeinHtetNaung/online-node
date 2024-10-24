@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+
+    <style>
+      :root {
+  --main-bg: #d1d5db;
+  --card-bg: #e5e7eb;
+  --text-gray: #9ca3af;
+  --text: #030712;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  /*Font-size => 10 */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1;
+
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  position: relative;
+  background-color: var(--card-bg);
+}
+
+.header {
+  padding: 2.4rem 3.2rem;
+}
+
+.site-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+
+.site-desc {
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 3.2rem;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.2rem;
+  
+}
+
+.card-link {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.product-card {
+  background-color: var(--main-bg);
+  padding: 1.6rem;
+  border: 1px solid;
+}
+
+.product-img {
+  width: 100%;
+  margin-bottom: 1.6rem;
+}
+
+.product-img img {
+  width: 100%;
+}
+
+.product-info ul {
+  list-style: none;
+}
+
+.product-info ul li {
+  font-size: 1.4rem;
+  display: flex;
+  gap: 1.2rem;
+  padding-bottom: 0.8rem;
+}
+
+.product-info ul li span:first-child {
+  width: 40%;
+}
+
+.product-info ul li i {
+  color: blue;
+}
+
+.btn {
+  background-color: blue;
+  padding: 0.8rem 1.6rem ;
+  color: white;
+  font-size: 1.4rem;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-left: auto;
+}
+    </style>
+    <title>Products</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="header">
+        <h2 class="site-title">Special Products With Offer</h2>
+        <p class="site-desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia iusto
+          maiores delectus asperiores, ea maxime animi, hic earum veritatis,
+          cupiditate inventore dicta doloremque ipsum odio neque quibusdam
+          consectetur vero repellat.
+        </p>
+      </section>
+      <section class="product">
+        {%cards%}
+
+        <!-- <div class="product-card">
+          <div class="product-img">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/024/646/930/small_2x/ai-generated-stray-cat-in-danger-background-animal-background-photo.jpg" alt="" />
+          </div>
+
+          <div class="product-info">
+            <ul>
+              <li>
+                <span>Rating</span>
+                <span>
+                  : <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+              </li>
+              <li>
+                <span>Name</span>
+                <span>: Test Product</span>
+              </li>
+              <li>
+                <span>Price</span>
+                <span>: $19.9</span>
+              </li>
+            </ul>
+          </div>
+          
+          <a href="#" class="btn">More Details</a>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/024/646/930/small_2x/ai-generated-stray-cat-in-danger-background-animal-background-photo.jpg" alt="" />
+          </div>
+
+          <div class="product-info">
+            <ul>
+              <li>
+                <span>Rating</span>
+                <span>
+                  : <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+              </li>
+              <li>
+                <span>Name</span>
+                <span>: Test Product</span>
+              </li>
+              <li>
+                <span>Price</span>
+                <span>: $19.9</span>
+              </li>
+            </ul>
+          </div>
+          
+          <a href="#" class="btn">More Details</a>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/024/646/930/small_2x/ai-generated-stray-cat-in-danger-background-animal-background-photo.jpg" alt="" />
+          </div>
+
+          <div class="product-info">
+            <ul>
+              <li>
+                <span>Rating</span>
+                <span>
+                  : <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+              </li>
+              <li>
+                <span>Name</span>
+                <span>: Test Product</span>
+              </li>
+              <li>
+                <span>Price</span>
+                <span>: $19.9</span>
+              </li>
+            </ul>
+          </div>
+          
+          <a href="#" class="btn">More Details</a>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/024/646/930/small_2x/ai-generated-stray-cat-in-danger-background-animal-background-photo.jpg" alt="" />
+          </div>
+
+          <div class="product-info">
+            <ul>
+              <li>
+                <span>Rating</span>
+                <span>
+                  : <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+              </li>
+              <li>
+                <span>Name</span>
+                <span>: Test Product</span>
+              </li>
+              <li>
+                <span>Price</span>
+                <span>: $19.9</span>
+              </li>
+            </ul>
+          </div>
+          
+          <a href="#" class="btn">More Details</a>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/024/646/930/small_2x/ai-generated-stray-cat-in-danger-background-animal-background-photo.jpg" alt="" />
+          </div>
+
+          <div class="product-info">
+            <ul>
+              <li>
+                <span>Rating</span>
+                <span>
+                  : <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+              </li>
+              <li>
+                <span>Name</span>
+                <span>: Test Product</span>
+              </li>
+              <li>
+                <span>Price</span>
+                <span>: $19.9</span>
+              </li>
+            </ul>
+          </div>
+          
+          <a href="#" class="btn">More Details</a>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/024/646/930/small_2x/ai-generated-stray-cat-in-danger-background-animal-background-photo.jpg" alt="" />
+          </div>
+
+          <div class="product-info">
+            <ul>
+              <li>
+                <span>Rating</span>
+                <span>
+                  : <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+              </li>
+              <li>
+                <span>Name</span>
+                <span>: Test Product</span>
+              </li>
+              <li>
+                <span>Price</span>
+                <span>: $19.9</span>
+              </li>
+            </ul>
+          </div>
+          
+          <a href="#" class="btn">More Details</a>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/024/646/930/small_2x/ai-generated-stray-cat-in-danger-background-animal-background-photo.jpg" alt="" />
+          </div>
+
+          <div class="product-info">
+            <ul>
+              <li>
+                <span>Rating</span>
+                <span>
+                  : <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+              </li>
+              <li>
+                <span>Name</span>
+                <span>: Test Product</span>
+              </li>
+              <li>
+                <span>Price</span>
+                <span>: $19.9</span>
+              </li>
+            </ul>
+          </div>
+          
+          <a href="#" class="btn">More Details</a>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/024/646/930/small_2x/ai-generated-stray-cat-in-danger-background-animal-background-photo.jpg" alt="" />
+          </div>
+
+          <div class="product-info">
+            <ul>
+              <li>
+                <span>Rating</span>
+                <span>
+                  : <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+              </li>
+              <li>
+                <span>Name</span>
+                <span>: Test Product</span>
+              </li>
+              <li>
+                <span>Price</span>
+                <span>: $19.9</span>
+              </li>
+            </ul>
+          </div>
+          
+          <a href="#" class="btn">More Details</a>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/024/646/930/small_2x/ai-generated-stray-cat-in-danger-background-animal-background-photo.jpg" alt="" />
+          </div>
+
+          <div class="product-info">
+            <ul>
+              <li>
+                <span>Rating</span>
+                <span>
+                  : <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+              </li>
+              <li>
+                <span>Name</span>
+                <span>: Test Product</span>
+              </li>
+              <li>
+                <span>Price</span>
+                <span>: $19.9</span>
+              </li>
+            </ul>
+          </div>
+          
+          <a href="#" class="btn">More Details</a>
+        </div>
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/024/646/930/small_2x/ai-generated-stray-cat-in-danger-background-animal-background-photo.jpg" alt="" />
+          </div>
+
+          <div class="product-info">
+            <ul>
+              <li>
+                <span>Rating</span>
+                <span>
+                  : <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+              </li>
+              <li>
+                <span>Name</span>
+                <span>: Test Product</span>
+              </li>
+              <li>
+                <span>Price</span>
+                <span>: $19.9</span>
+              </li>
+            </ul>
+          </div>
+          
+          <a href="#" class="btn">More Details</a>
+        </div> -->
+      </section>
+    </div>
+  </body>
+</html>
